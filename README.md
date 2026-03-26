@@ -54,5 +54,4 @@ streamlit run app.py
 - See exact source chunks used
 - 100% private — runs on your laptop
 
-## 🤝 Built By
-Rasam — as a one-day RAG chatbot project
+
