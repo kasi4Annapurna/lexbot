@@ -9,7 +9,7 @@ A RAG (Retrieval Augmented Generation) chatbot that lets you upload any PDF and 
 - **Sentence Transformers** — Text embeddings
 - **Groq LLM** — Free AI answer generation
 - **LangChain** — Framework glue
-- **PyPDF** — PDF reading
+- **PyPDF** — PDF Reading
 
 ## 💡 What is RAG?
 RAG = Retrieval Augmented Generation:
