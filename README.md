@@ -54,4 +54,13 @@ streamlit run app.py
 - See exact source chunks used
 - 100% private — runs on your laptop
 
+RESULTS :
+
+<img width="1698" height="767" alt="Screenshot 2026-08-05 124305" src="https://github.com/user-attachments/assets/14b32064-aa04-4445-a05a-f2cb33fd7b04" />
+
+<img width="1562" height="701" alt="Screenshot 2026-08-05 124315" src="https://github.com/user-attachments/assets/9144d5d7-e45b-4d3a-873a-ff67c802b1ad" />
+
+<img width="1518" height="777" alt="Screenshot 2026-08-05 124337" src="https://github.com/user-attachments/assets/7b27e8b6-48d0-484e-b258-6b10b95f0e36" />
+
+
 
