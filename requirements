@@ -1,6 +1,6 @@
-streamlit
-chromadb
-openai
-pypdf
-python-dotenv
-onnxruntime
+streamlit==1.39.0
+chromadb==0.5.5
+openai==1.54.0
+pypdf==4.3.1
+python-dotenv==1.0.1
+onnxruntime==1.19.2
