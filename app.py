@@ -18,7 +18,7 @@ client = OpenAI(
 )
 
 # Use PersistentClient instead of EphemeralClient (fixes the crash)
-chroma_client = chromadb.PersistentClient(path="./chroma_db")
+chroma_client = chromadb.EphemeralClient()
 embed_fn = DefaultEmbeddingFunction()
 
 # ---- FUNCTIONS ----
