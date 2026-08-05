@@ -7,7 +7,6 @@ import tempfile
 import os
 from dotenv import load_dotenv
 
-# ---- SETUP ----
 load_dotenv()
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
@@ -17,11 +16,8 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1"
 )
 
-# Use PersistentClient instead of EphemeralClient (fixes the crash)
 chroma_client = chromadb.EphemeralClient()
 embed_fn = DefaultEmbeddingFunction()
-
-# ---- FUNCTIONS ----
 
 def read_pdf(file):
     reader = PdfReader(file)
@@ -65,7 +61,7 @@ def search_db(query, collection, n_results=3):
 
 def ask_groq(question, context_chunks):
     if not GROQ_API_KEY:
-        return "⚠️ **GROQ_API_KEY is not set.** Please check your `.env` file."
+        return "⚠️ GROQ_API_KEY is not set. Please add it in Streamlit Secrets."
     
     context = "\n\n---\n\n".join(context_chunks)
     prompt = f"""You are a helpful assistant. Answer the question using ONLY the context below.
@@ -87,14 +83,12 @@ Answer:"""
     except Exception as e:
         return f"❌ Error calling Groq API: {str(e)}"
 
-# ---- UI ----
-
 st.set_page_config(page_title="LexBot", page_icon="📄", layout="centered")
 st.title("📄 LexBot — Ask Your PDF Anything!")
 st.write("Upload a PDF, then ask questions about it.")
 
 if not GROQ_API_KEY:
-    st.warning("⚠️ No GROQ_API_KEY found. Check your `.env` file.")
+    st.warning("⚠️ No GROQ_API_KEY found. Add it in Streamlit Secrets.")
 
 uploaded_file = st.file_uploader("Upload your PDF here", type="pdf")
 
